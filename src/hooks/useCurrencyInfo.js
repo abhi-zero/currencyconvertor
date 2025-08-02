@@ -6,7 +6,7 @@ function useCurrencyInfo(currency) {
     const [data, setData] = useState({});
 
     useEffect(() =>{
-        fetch(`/currency/v6/${import.meta.env.VITE_API_KEY}/latest/${currency}`)
+        fetch(` https://v6.exchangerate-api.com/v6/${import.meta.env.VITE_API_KEY}/latest/${currency}`)
         .then((response)=>{
             if(!response.ok) {
                 throw new Error("failed to fetch");
